@@ -1,5 +1,7 @@
 #pragma once
 
+#include "xmmintrin.h"
+
 #define CHECK_VALID(_v) 0
 #define Assert(_exp) ((void)0)
 
