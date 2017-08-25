@@ -570,19 +570,19 @@ float EntityWeapon::getNextPrimAtt()
 float EntityWeapon::getInac()
 {
 	typedef float(__thiscall *o_getInac)(void*);
-	return VT::vfunc<o_getInac>(this, 483)(this);
+	return VT::vfunc<o_getInac>(this, 469)(this);
 }
 
 float EntityWeapon::getSir()
 {
 	typedef float(__thiscall *o_getSir)(void*);
-	return VT::vfunc<o_getSir>(this, 484)(this);
+	return VT::vfunc<o_getSir>(this, 439)(this);
 }
 
 void EntityWeapon::upAccurPen()
 {
 	typedef void(__thiscall *o_upAccurPen)(void*);
-	VT::vfunc<o_upAccurPen>(this, 485)(this);
+	VT::vfunc<o_upAccurPen>(this, 470)(this);
 }
 
 bool EntityWeapon::isEmpty()
@@ -600,9 +600,9 @@ WeapInfo_t *EntityWeapon::getWeapInfo()
 {
 	if (!this || this == NULL)
 		return NULL;
-
+ 
 	typedef WeapInfo_t *(__thiscall *o_getWeapInfo)(void*);
-	return VT::vfunc<o_getWeapInfo>(this, 456)(this);
+	return VT::vfunc<o_getWeapInfo>(this, 446)(this);
 }
 
 int *EntityWeapon::getItemDefIdx()
