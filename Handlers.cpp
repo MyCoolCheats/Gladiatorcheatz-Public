@@ -92,13 +92,6 @@ void __fastcall Handlers::PaintTraverse_h(void *thisptr, void*, unsigned int vgu
 			p_Surface->setFontGlyphSet(ui_font, XorStr("Tahoma"), 14, 350, 0, 0, FONTFLAG_OUTLINE);
 
 			p_Engine->execClientCMD(XorStr("clear"));
-			p_Console->ConsoleColorPrintf(Color(0, 255, 0, 255), " ____    ___                __                __                        __                       __                ___                        __             __      \n");
-			p_Console->ConsoleColorPrintf(Color(0, 255, 0, 255), "/\\  _`\\ /\\_ \\              /\\ \\  __          /\\ \\__                    /\\ \\                     /\\ \\__            /\\_ \\                      /\\ \\           /\\ \\     \n");
-			p_Console->ConsoleColorPrintf(Color(0, 255, 0, 255), "\\ \\ \\L\\_\\//\\ \\      __     \\_\\ \\/\\_\\     __  \\ \\ ,_\\   ___   _ __   ___\\ \\ \\___      __     __  \\ \\ ,_\\  ____     \\//\\ \\     ___      __     \\_\\ \\     __   \\_\\ \\    \n");
-			p_Console->ConsoleColorPrintf(Color(0, 255, 0, 255), " \\ \\ \\L_L \\ \\ \\   /'__`\\   /'_` \\/\\ \\  /'__`\\ \\ \\ \\/  / __`\\/\\`'__\\/'___\\ \\  _ `\\  /'__`\\ /'__`\\ \\ \\ \\/ /\\_ ,`\\     \\ \\ \\   / __`\\  /'__`\\   /'_` \\  /'__`\\ /'_` \\   \n");
-			p_Console->ConsoleColorPrintf(Color(0, 255, 0, 255), "  \\ \\ \\/, \\\\_\\ \\_/\\ \\L\\.\\_/\\ \\L\\ \\ \\ \\/\\ \\L\\.\\_\\ \\ \\_/\\ \\L\\ \\ \\ \\//\\ \\__/\\ \\ \\ \\ \\/\\  __//\\ \\L\\.\\_\\ \\ \\_\\/_/  /_     \\_\\ \\_/\\ \\L\\ \\/\\ \\L\\.\\_/\\ \\L\\ \\/\\  __//\\ \\L\\ \\  \n");
-			p_Console->ConsoleColorPrintf(Color(0, 255, 0, 255), "   \\ \\____//\\____\\ \\__/.\\_\\ \\___,_\\ \\_\\ \\__/.\\_\\\\ \\__\\ \\____/\\ \\_\\\\ \\____\\\\ \\_\\ \\_\\ \\____\\ \\__/.\\_\\\\ \\__\\ /\\____\\    /\\____\\ \\____/\\ \\__/.\\_\\ \\___,_\\ \\____\\ \\___,_\\ \n");
-			p_Console->ConsoleColorPrintf(Color(0, 255, 0, 255), "    \\/___/ \\/____/\\/__/\\/_/\\/__,_ /\\/_/\\/__/\\/_/ \\/__/\\/___/  \\/_/ \\/____/ \\/_/\\/_/\\/____/\\/__/\\/_/ \\/__/ \\/____/    \\/____/\\/___/  \\/__/\\/_/\\/__,_ /\\/____/\\/__,_ / \n");
 			p_Console->ConsoleColorPrintf(Color(0, 255, 0, 255), XorStr("\n"));
 
 			char defFile[MAX_PATH] = { 0 };
@@ -119,7 +112,6 @@ void __fastcall Handlers::PaintTraverse_h(void *thisptr, void*, unsigned int vgu
 			}
 
 			p_Engine->execClientCMD(XorStr("version"));
-			p_Engine->execClientCMD(XorStr("toggleconsole"));
 
 			nadeTracer = std::make_shared<NadeTracer>(NadeTracer(crtaj));
 		}
@@ -930,7 +922,7 @@ void mainProzor()
 
 	ImGui::SetNextWindowSize(ImVec2(860, 540), ImGuiSetCond_FirstUseEver);
 
-	if (ImGui::Begin(XorStr("Gladiatorcheatz"), NULL/*&showMainProzor*/, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_ShowBorders))
+	if (ImGui::Begin(XorStr(" "), NULL/*&showMainProzor*/, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_ShowBorders))
 	{
 		ImGui::BeginGroup();
 
