@@ -1708,7 +1708,7 @@ void drawConfig()
 
 		GetTempPath(MAX_PATH, buf);
 
-		std::string fPath = std::string(buf) + "gladiatorcheatz\\" + fName + ".glad";
+		std::string fPath = std::string(buf) + "CFG\\" + fName + ".glad";
 		writeConf(fPath);
 
 		configItems = getAllConf();
@@ -1723,7 +1723,7 @@ void drawConfig()
 
 			GetTempPath(MAX_PATH, buf);
 
-			std::string fPath = std::string(buf) + "gladiatorcheatz\\" + configItems[configItemCurrent] + ".glad";
+			std::string fPath = std::string(buf) + "CFG\\" + configItems[configItemCurrent] + ".glad";
 			writeConf(fPath);
 		}
 	}
@@ -1737,7 +1737,7 @@ void drawConfig()
 
 			GetTempPath(MAX_PATH, buf);
 
-			std::string fPath = std::string(buf) + "gladiatorcheatz\\" + configItems[configItemCurrent] + ".glad";
+			std::string fPath = std::string(buf) + "CFG\\" + configItems[configItemCurrent] + ".glad";
 			std::remove(fPath.c_str());
 
 			configItems = getAllConf();
@@ -1752,7 +1752,7 @@ void drawConfig()
 
 		GetTempPath(MAX_PATH, buf);
 
-		std::string fPath = std::string(buf) + "gladiatorcheatz\\" + configItems[configItemCurrent] + ".glad";
+		std::string fPath = std::string(buf) + "CFG\\" + configItems[configItemCurrent] + ".glad";
 		loadConf(fPath);
 	}
 	ImGui::PopItemWidth();
@@ -2138,8 +2138,6 @@ void writeConf(std::string path)
 {
 	std::unique_ptr<Logging::FileLogger> fileLogger = std::make_unique<Logging::FileLogger>(path, path);
 
-	fileLogger->write(XorStr("[Gladiatorcheatz]\n"));
-
 	fileLogger->write(XorStr("Aimkey = %d"), mVars.kAim);
 	fileLogger->write(XorStr("Aimkey2 = %d"), mVars.kAim2);
 	fileLogger->write(XorStr("Aimlock = %d"), mVars.bEnableSkelet);
@@ -2251,7 +2249,7 @@ std::vector<std::string> getAllConf()
 	GetTempPath(MAX_PATH, buf);
 
 	strcpy_s(file, buf);
-	strcat_s(file, "gladiatorcheatz\\");
+	strcat_s(file, "CFG\\");
 
 	std::vector<ConfigFile> confFiles = getAllConfInFolder(file);
 	std::vector<std::string> confs;
