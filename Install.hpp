@@ -1,4 +1,4 @@
 #pragma once
 
-void installGladiator();
-void uninstallGladiator();
+void installSF();
+void uninstallSF();
