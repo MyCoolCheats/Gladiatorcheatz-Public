@@ -114,8 +114,6 @@ void Misc::nameChanger()
 
 		return;
 	}
-
-	changeName(setStrRight("Gladiatorcheatz", strlen("Gladiatorcheatz") + promene));
 }
 
 void Misc::changeName(const char *name)
