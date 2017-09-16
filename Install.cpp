@@ -176,12 +176,12 @@ bool applyProxies()
 	return success;
 }
 
-void installGladiator()
+void installSF()
 {
 	init();
 }
 
-void uninstallGladiator()
+void uninstallSF()
 {
 	SetWindowLongPtr(prozor, GWLP_WNDPROC, (LONG_PTR)oldWindowProc);
 
