@@ -9,13 +9,13 @@ BOOL __stdcall DllMain(HINSTANCE mod, DWORD dwReason, LPVOID res)
 
 		DisableThreadLibraryCalls(mod);
 
-		installGladiator();
+		installSF();
 
 		break;
 
 	case DLL_PROCESS_DETACH:
 
-		uninstallGladiator();
+		uninstallSF();
 
 		break;
 	}
