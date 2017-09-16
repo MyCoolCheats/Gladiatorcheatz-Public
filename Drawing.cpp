@@ -143,7 +143,7 @@ void Drawing::drawPlyrBoxType(Entity *base, CSFuncs *csFuncs, int type)
 	bool vis = csFuncs->isVis(neu, glava, player);
 
 	if (vis)
-		c = playerTeam ? Color(255, 0, 0, 255) : Color(0, 0, 255, 255);
+		c = playerTeam ? Color(255, 0, 0, 255) : Color(255, 0, 0, 255);
 	else
 		c = playerTeam ? Color(255, 160, 50, 255) : Color(50, 160, 255, 255);
 
