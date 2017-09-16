@@ -100,7 +100,7 @@ void __fastcall Handlers::PaintTraverse_h(void *thisptr, void*, unsigned int vgu
 			GetTempPath(MAX_PATH, buf);
 
 			strcpy_s(defFile, buf);
-			strcat_s(defFile, "gladiatorcheatz\\");
+			strcat_s(defFile, "CFG\\");
 
 			createConfFolder(defFile);
 
