@@ -217,7 +217,7 @@ void Drawing::drawPlyrName(int idx, Entity *base, CSFuncs *csFuncs)
 	bool vis = csFuncs->isVis(neu, glava, player);
 
 	if (vis)
-		c = playerTeam ? Color(255, 0, 0, 255) : Color(0, 0, 255, 255);
+		c = playerTeam ? Color(255, 0, 0, 255) : Color(255, 0, 0, 255);
 	else
 		c = playerTeam ? Color(255, 160, 50, 255) : Color(50, 160, 255, 255);
 
@@ -425,8 +425,7 @@ void Drawing::drawC4Planted(Entity *base, CSFuncs *csFuncs)
 
 			if (w2s(orig, screenOrig))
 			{
-				crtaj->drawString(ui_font, true, screenOrig.xAechse, screenOrig.yAechse + 10, Color(255, 0, 0, 255), buf);
-				crtaj->fillRGBA(screenOrig.xAechse, screenOrig.yAechse, 4, 4, Color(255, 0, 0, 255));
+				crtaj->drawString(ui_font, true, screenOrig.xAechse, screenOrig.yAechse + 10, Color(0, 255, 0, 255), buf);
 			}
 		}
 	}
