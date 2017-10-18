@@ -2146,7 +2146,8 @@ void loadConf(std::string path)
 		mVars.bEnableSpec = sConfigMgr->getInt(XorStr("SpecList"));
 		mVars.bEnableResolve = sConfigMgr->getInt(XorStr("ResolveAll"));
 		mVars.bEnableSkinChange =sConfigMgr->getInt(XorStr("Skinchanger"));
-
+		mVars.bDisablePostprocessing = sConfigMgr->getInt(XorStr("Postprocessing"));
+		
 		p_Console->ConsoleColorPrintf(Color(0, 255, 0, 255), XorStr("Config successfully loaded!\n"));
 	}
 }
@@ -2218,6 +2219,7 @@ void writeConf(std::string path)
 	fileLogger->write(XorStr("SpecList = %d"), mVars.bEnableSpec);
 	fileLogger->write(XorStr("ResolveAll = %d"), mVars.bEnableResolve);
 	fileLogger->write(XorStr("Skinchanger = %d"), mVars.bEnableSkinChange);
+	fileLogger->write(XorStr("Postprocessing = %d"), mVars.bDisablePostprocessing);
 }
 
 bool fileExists(std::string &file)
