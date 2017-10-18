@@ -3,7 +3,7 @@
 
 std::vector<std::string> msgs =
 {
-	"@_@",
+	" ",
 };
 
 void Spammer::spam()
