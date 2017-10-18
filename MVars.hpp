@@ -90,7 +90,8 @@ public:
 	bool bEnableHitMarkers = false;
 	bool bEnableChatBot = false;
 	bool bLbyBreaker = false;
-
+	bool bDisablePostprocessing = false;
+	
 	std::unordered_map<int, WeaponSettings> weapons;
 };
 
