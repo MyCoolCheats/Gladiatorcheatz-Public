@@ -1291,7 +1291,7 @@ void miscTab()
 			{
 				ImGui::Checkbox("Auto-Accept", &mVars.bEnableAA);
 				ImGui::Checkbox("Reveal Ranks", &mVars.bEnableRankRev);
-				ImGui::Checkbox("Spammer", &mVars.bEnableSpam);
+				//ImGui::Checkbox("Spammer", &mVars.bEnableSpam);
 				//ImGui::Checkbox("Chat Bot", &mVars.bEnableChatBot);
 				ImGui::Checkbox("Spectator List", &mVars.bEnableSpec);
 			}
