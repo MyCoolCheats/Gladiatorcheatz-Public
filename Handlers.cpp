@@ -282,7 +282,23 @@ bool __stdcall Handlers::CreateMove_h(float smt, UserCMD *userCMD)
 			lagComp->setCurrentEnt(player);
 		}
 	}
-
+	
+	ConVar* postprocess = p_Console->FindVar("mat_postprocess_enable");
+		{
+		if (mVars.bDisablePostprocessing) {
+			if (postprocess)
+			{
+				postprocess->SetValue(0);
+			}
+		}
+		else {
+			if (postprocess)
+			{
+				postprocess->SetValue(1);
+			}
+		}
+	}
+	
 	return false;
 }
 
