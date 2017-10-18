@@ -1247,6 +1247,7 @@ void visualTab()
 				ImGui::Checkbox("No Flash", &mVars.bEnableNoFlash);
 				ImGui::Checkbox("No Smoke", &mVars.bEnableNoSmoke);
 				ImGui::Checkbox("No Visual Recoil", &mVars.bNoVisRec);
+				ImGui::Checkbox("Disable Post Processing", &mVars.bDisablePostprocessing);
 			}
 			ImGui::Columns(1);
 			ImGui::Separator();
