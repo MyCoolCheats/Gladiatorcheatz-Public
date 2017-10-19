@@ -88,6 +88,7 @@ namespace Global
 	extern bool bSearching;
 	extern UserCMD *userCMD;
 	extern Vector3 visAechse;
+	extern Vector3 StoredAngle;
 	extern float oldSimulTime[65];
 }
 
