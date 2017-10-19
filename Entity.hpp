@@ -36,7 +36,7 @@ public:
 	bool isStationary();
 	bool isImmune();
 	bool getLifeState();
-	int &getFlags();
+	unsigned int &getFlags();
 	int getMoveTip();
 	int getFiredShots();
 	int getTickBase();
