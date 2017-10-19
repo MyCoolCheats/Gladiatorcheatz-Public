@@ -135,11 +135,32 @@ float nextPrimAtt;
 float curTime;
 bool canFire = false;
 bool oldBullet = false;
+bool m_bWasFrozen = false;
+Vector3 oldAnglesFreez;
 
 bool __stdcall Handlers::CreateMove_h(float smt, UserCMD *userCMD)
 {
 	Global::locPlayer = reinterpret_cast<Entity*>(p_ClientEntList->GetClientEntity(p_Engine->getLocPlyr()));
 	Global::userCMD = userCMD;
+	
+	if ((Global::locPlayer->getFlags() & FL_FROZEN) != 0)
+	{
+		if (m_bWasFrozen)
+		{
+			userCMD->viewangles = oldAnglesFreez;
+			return true;
+		}
+		else
+		{
+			m_bWasFrozen = true;
+		}
+	}
+	else
+	{
+		m_bWasFrozen = false;
+	}
+
+	oldAnglesFreez = Global::StoredAngle;
 
 	if (mVars.bEnableRage)
 		mVars.bEnableSkelet = false;
@@ -853,6 +874,7 @@ namespace Global
 	bool bSearching;
 	UserCMD *userCMD;
 	Vector3 visAechse;
+	Vector3 StoredAngle;
 	float oldSimulTime[65];
 }
 
