@@ -304,6 +304,8 @@ bool __stdcall Handlers::CreateMove_h(float smt, UserCMD *userCMD)
 		}
 	}
 	
+	Global::StoredAngle = userCMD->viewangles;
+	
 	ConVar* postprocess = p_Console->FindVar("mat_postprocess_enable");
 		{
 		if (mVars.bDisablePostprocessing) {
