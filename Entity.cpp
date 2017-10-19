@@ -40,9 +40,9 @@ bool Entity::getLifeState()
 	return *(bool*)((DWORD)this + offs.lifeSt);
 }
 
-int &Entity::getFlags()
+unsigned int &Entity::getFlags()
 {
-	return *(int*)((DWORD)this + offs.flags);
+	return *(unsigned int*)((DWORD)this + offs.flags);
 }
 
 int Entity::getMoveTip()
