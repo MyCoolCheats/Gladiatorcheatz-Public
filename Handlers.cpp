@@ -319,6 +319,7 @@ bool __stdcall Handlers::CreateMove_h(float smt, UserCMD *userCMD)
 			if (postprocess)
 			{
 				postprocess->SetValue(1);
+				p_Console->FindVar("r_dynamiclighting")->SetValue(1);
 			}
 		}
 	}
