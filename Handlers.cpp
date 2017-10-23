@@ -312,6 +312,7 @@ bool __stdcall Handlers::CreateMove_h(float smt, UserCMD *userCMD)
 			if (postprocess)
 			{
 				postprocess->SetValue(0);
+				p_Console->FindVar("r_dynamiclighting")->SetValue(0);
 			}
 		}
 		else {
@@ -2024,7 +2025,7 @@ void SESPThread(CSFuncs *csFuncs)
 								if (p_Engine->getPlyrInfo(trgt->getIdx(), &p_info2))
 								{
 									char plyrName[255] = { 0 };
-									sprintf_s(plyrName, "%s => %s", p_info.name, p_info2.name);
+									sprintf_s(plyrName, "%s > %s", p_info.name, p_info2.name);
 
 									RECT txtSize = crtaj->getTextSize(ui_font, plyrName);
 
