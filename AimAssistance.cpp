@@ -188,8 +188,8 @@ bool AimAssist::checkTarget(Entity *player)
 	if (!csFuncs->isVis(neu, glava, player))
 		return false;
 
-	if (isBehindSmoke(neu, glava))
-		return false;
+	/* if (isBehindSmoke(neu, glava))
+		return false; */
 
 	return true;
 }
