@@ -421,7 +421,7 @@ void Drawing::drawC4Planted(Entity *base, CSFuncs *csFuncs)
 			Vector3 screenOrig;
 
 			char buf[50];
-			sprintf(buf, "%.2f s", timeLeft);
+			sprintf(buf, "%.2f", timeLeft);
 
 			if (w2s(orig, screenOrig))
 			{
